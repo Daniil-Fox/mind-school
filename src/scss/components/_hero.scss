@@ -1,0 +1,21 @@
+.hero {
+
+  &__background {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(top, rgba(#15585f, 0.2), rgba(#259da8, 0.4));
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
