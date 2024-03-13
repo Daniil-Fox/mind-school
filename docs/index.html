@@ -21,22 +21,25 @@
 
 <body class="page__body">
   <div class="site-container">
-    <header class="header">
+    <header class="header" data-aos="fade-down">
   <div class="container header__container">
+    <div class="header__burger">
+      <div class="line"></div>
+    </div>
     <nav class="header__nav nav">
       <ul class="list-reset nav__list">
         <li class="nav__item">
-          <a href="#" class="nav__link">О нас</a>
+          <a href="#coachers" class="nav__link">О нас</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Услуги</a>
+          <a href="#courses" class="nav__link">Услуги</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">Контакты</a>
+          <a href="#contacts" class="nav__link">Контакты</a>
         </li>
       </ul>
     </nav>
-    <a href="./" class="header__logo">MIND SCHOOL LOGO</a>
+    <a class="header__logo">MIND SCHOOL LOGO</a>
 
     <div class="header__tel">
       <a href="tel:">Телефон: +12345678990</a>
@@ -44,25 +47,32 @@
   </div>
 </header>
     <main class="main">
-      <section class="hero">
+      <section class="hero" data-aos="fade-up">
   <div class="hero__background">
+    <div class="hero__content">
+      <h1 class="hero__title">MIND SCHOOL</h1>
+      <p class="hero__desc">
+        язык для жизни, учебы и работы
+      </p>
+    </div>
     <picture>
       <source srcset="./img/hero.webp" type="image/webp">
       <img src="./img/hero.png">
     </picture>
+    <a href="#benefits" class="hero__down-btn"></a>
   </div>
 </section>
-      <section class="benefits">
+      <section class="benefits" id="benefits">
   <div class="container benefits__container">
-    <h2 class="title2 benefits__title">Почему выбирают нас?</h2>
+    <h2 class="title2 benefits__title" data-aos="fade-up">Почему выбирают нас?</h2>
     <ul class="benefits__list list-reset">
       <li class="benefits__item">
-        <div class="benefits__icon">
+        <div class="benefits__icon" data-aos="fade-right">
           <svg class="">
             <use xlink:href="img/sprite.svg#lamp"></use>
           </svg>
         </div>
-        <div class="benefits__content">
+        <div class="benefits__content" data-aos="fade-left">
           <h6 class="benefits__name">Интерактивные платформы</h6>
           <p class="benefits__desc">
             Занятия проходят на интерактивных платформах, что делает формат онлайн обучения удобным и эффективным.
@@ -70,12 +80,12 @@
         </div>
       </li>
       <li class="benefits__item">
-        <div class="benefits__icon">
+        <div class="benefits__icon" data-aos="fade-right">
           <svg class="">
             <use xlink:href="img/sprite.svg#earth"></use>
           </svg>
         </div>
-        <div class="benefits__content">
+        <div class="benefits__content" data-aos="fade-left">
           <h6 class="benefits__name">Аутентичные материалы</h6>
           <p class="benefits__desc">
             Важным элементом наших курсов являются аутентичные материалы (статьи, интервью, фильмы и сериалы), которые
@@ -84,12 +94,12 @@
         </div>
       </li>
       <li class="benefits__item">
-        <div class="benefits__icon">
+        <div class="benefits__icon" data-aos="fade-right">
           <svg class="">
             <use xlink:href="img/sprite.svg#calendar"></use>
           </svg>
         </div>
-        <div class="benefits__content">
+        <div class="benefits__content" data-aos="fade-left">
           <h6 class="benefits__name">Удобная организация учебного процесса</h6>
           <p class="benefits__desc">
             Для организации учебного процесса мы используем онлайн ежедневник notion, где хранится информация по
@@ -98,12 +108,12 @@
         </div>
       </li>
       <li class="benefits__item">
-        <div class="benefits__icon">
+        <div class="benefits__icon" data-aos="fade-right">
           <svg class="">
             <use xlink:href="img/sprite.svg#mind"></use>
           </svg>
         </div>
-        <div class="benefits__content">
+        <div class="benefits__content" data-aos="fade-left">
           <h6 class="benefits__name">Методика</h6>
           <p class="benefits__desc">
             В работе используем коммуникативный подход, это значит, что большую часть времени мы уделяем общению на
@@ -113,12 +123,12 @@
         </div>
       </li>
       <li class="benefits__item">
-        <div class="benefits__icon">
+        <div class="benefits__icon" data-aos="fade-right">
           <svg class="">
             <use xlink:href="img/sprite.svg#lamp-2"></use>
           </svg>
         </div>
-        <div class="benefits__content">
+        <div class="benefits__content" data-aos="fade-left">
           <h6 class="benefits__name">Увлекательные занятия</h6>
           <p class="benefits__desc">
             Мы умеем превращать скучное в увлекательное, добавляя обсуждение актуальных новостей, юмор и творчество.
@@ -129,10 +139,10 @@
     </ul>
   </div>
 </section>
-      <section class="coachers">
+      <section class="coachers" id="coachers">
   <div class="container">
-    <h2 class="title2 coachers__title">Преподаватели школы</h2>
-    <p class="coachers__desc">
+    <h2 class="title2 coachers__title" data-aos="fade-up">Преподаватели школы</h2>
+    <p class="coachers__desc" data-aos="fade-up">
       Мы поможем вам не только освоить грамматику и повысить словарный запас, но и научим говорить на живом английском
       языке.
       На своих уроках мы создаем теплую и доверительную атмосферу, помогаем преодолеть плато в изучении английского и
@@ -208,14 +218,21 @@
           </article>
         </div>
       </div>
+
+      <div class="coachers__btn coachers__btn--prev">
+        <img src="./img/arr.png" alt="">
+      </div>
+      <div class="coachers__btn coachers__btn--next">
+        <img src="./img/arr.png" alt="">
+      </div>
     </div>
   </div>
 </section>
-      <section class="courses">
+      <section class="courses" id="courses">
   <div class="courses__heading">
     <div class="container">
-      <h2 class="title2 courses__title">Курсы</h2>
-      <p class="desc courses__desc">
+      <h2 class="title2 courses__title" data-aos="fade-up">Курсы</h2>
+      <p class="desc courses__desc" data-aos="fade-up">
         Мы проводим уроки в индивидуальном формате, парах и мини-группах.
         Каждый формат урока имеет свои особенности и преимущества, позволяя вам выбрать оптимальный вариант для
         достижения своих целей.
@@ -325,7 +342,7 @@
       <section class="testimonials">
   <div class="testimonials__heading">
     <div class="container">
-      <h2 class="title2 testimonials__title">Отзывы наших учеников</h2>
+      <h2 class="title2 testimonials__title" data-aos="fade-up">Отзывы наших учеников</h2>
     </div>
   </div>
   <div class="container testimonials__content">
@@ -391,9 +408,9 @@
 </section>
       <section class="faq">
   <div class="container faq__container">
-    <h2 class="faq__title title2">Часто задаваемые вопросы</h2>
+    <h2 class="faq__title title2" data-aos="fade-up">Часто задаваемые вопросы</h2>
     <ul class="list-reset faq__list">
-      <li class="faq__item">
+      <li class="faq__item" data-aos="fade-up">
         <div class="faq__header">
           Как проходят уроки?
         </div>
@@ -405,7 +422,7 @@
             использовать тетрадь для заметок.</p>
         </div>
       </li>
-      <li class="faq__item">
+      <li class="faq__item" data-aos="fade-up">
         <div class="faq__header">
           Есть ли пробное занятие?
         </div>
@@ -416,7 +433,7 @@
           </p>
         </div>
       </li>
-      <li class="faq__item">
+      <li class="faq__item" data-aos="fade-up">
         <div class="faq__header">
           Как оплачивать занятия?
         </div>
@@ -426,7 +443,7 @@
           </p>
         </div>
       </li>
-      <li class="faq__item">
+      <li class="faq__item" data-aos="fade-up">
         <div class="faq__header">
           Какие правила отмены и переноса уроков?
         </div>
@@ -439,7 +456,7 @@
           </p>
         </div>
       </li>
-      <li class="faq__item">
+      <li class="faq__item" data-aos="fade-up">
         <div class="faq__header">
           Сколько раз в неделю нужно заниматься для получения результата?
         </div>
@@ -454,7 +471,7 @@
     </ul>
   </div>
 </section>
-      <section class="cta">
+      <section class="cta" id="contacts">
   <div class="container">
     <h2 class="cta__title title2">Записаться на пробный урок</h2>
     <form action="#" class="cta__form form">
@@ -465,7 +482,7 @@
         <input type="text" placeholder="Ваш возраст" class="form__input form-age">
       </label>
       <label class="form__label">
-        <input autocomplete="off" type="text" placeholder="Какой ваш уровень языка?" class="form__input">
+        <input autocomplete="off" type="text" placeholder="Какой ваш уровень языка?" class="form__input form-lvl">
       </label>
       <span class="form__title">Какой курс вас интересует?</span>
       <div class="form__choose">
@@ -498,11 +515,40 @@
         <input type="tel" placeholder="Ваш WhatsApp или Telegram" class="form__input form-tel">
       </label>
       <label class="form__label">
-        <input name="wishes" placeholder="Ваши дополнительные пожелания" class="form__input"></input>
+        <input name="wishes" placeholder="Ваши дополнительные пожелания" class="form__input form-wish"></input>
       </label>
+
+      <button class="form__btn btn-reset" type="submit">Отправить</button>
     </form>
   </div>
 </section>
+      <div class="menu">
+  <div class="menu__body">
+    <div class="menu__close">
+      <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"
+          fill="#fff" />
+      </svg>
+    </div>
+    <nav class="menu__nav nav">
+      <ul class="list-reset nav__list">
+        <li class="nav__item">
+          <a href="#coachers" class="nav__link">О нас</a>
+        </li>
+        <li class="nav__item">
+          <a href="#courses" class="nav__link">Услуги</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header__tel menu__tel">
+      <a href="tel:">Телефон: +12345678990</a>
+    </div>
+  </div>
+</div>
     </main>
     <footer class="footer">
   <div class="container footer__container">

@@ -8,10 +8,18 @@
   &__title {
     margin-bottom: 50px;
     text-align: center;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
     padding: 20px 0;
+
+    @include mobile {
+      padding: 12px 0;
+    }
 
     &.active {
       .faq__header::before {
@@ -28,6 +36,14 @@
     gap: 10px;
     cursor: pointer;
 
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+    }
+
     &::before {
       content: "";
       display: block;
@@ -36,8 +52,13 @@
       border-top: 2px solid #000;
       border-right: 2px solid #000;
       transform: rotate(45deg);
-
+      flex-shrink: 0;
       transition: transform .3s ease-out;
+
+      @include small-tablet {
+        width: 8px;
+        height: 8px;
+      }
     }
 
 
@@ -57,6 +78,15 @@
       font-size: 20px;
       font-weight: 300;
       line-height: 1.55;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        padding-top: 10px;
+        font-size: 14px;
+      }
 
       strong {
         font-weight: 700;

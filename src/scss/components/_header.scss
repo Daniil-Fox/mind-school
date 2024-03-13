@@ -7,6 +7,46 @@
   padding: 20px 0;
   background-color: rgba(#259da8, 1);
 
+  &__burger {
+    width: 25px;
+    height: 20px;
+
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+
+    @include mobile {
+      display: flex;
+    }
+
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 5px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -18,6 +58,14 @@
     font-weight: 600;
     color: var(--white);
     white-space: nowrap;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 
   &__tel {
@@ -25,6 +73,18 @@
     font-size: 20px;
     letter-spacing: .4px;
     position: relative;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      display: none;
+    }
 
     &::before {
       content: "";

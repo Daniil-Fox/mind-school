@@ -2,9 +2,29 @@
   padding: 90px 0;
   background-color: #EDEDED;
 
+  @include big-desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 90px;
+
+    @include big-desktop {
+      margin-bottom: 60px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__form {
@@ -14,6 +34,28 @@
 }
 
 .form {
+  text-align: center;
+
+  &__btn {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: var(--accent);
+
+    font-size: 20px;
+    letter-spacing: .5px;
+    font-weight: 500;
+    color: #fff;
+    transition: background-color .3s ease-out;
+
+    @include hover {
+      background-color: rgb(39, 198, 198);
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      padding: 10px 30px;
+    }
+  }
 
   &__label {
     display: block;
@@ -25,6 +67,11 @@
 
     &:not(:last-child) {
       margin-bottom: 40px;
+    }
+
+    @include mobile {
+      font-size: 15px;
+      height: 50px;
     }
   }
 
@@ -43,8 +90,19 @@
     line-height: 1.33;
     color: #000;
 
+    @include mobile {
+      font-size: 14px;
+      padding: 10px;
+    }
+
     &:focus {
       outline: none;
+    }
+
+    &::placeholder {
+      @include mobile {
+        font-size: 15px;
+      }
     }
   }
 
@@ -53,6 +111,7 @@
     margin-bottom: 30px;
     font-size: 20px;
     font-weight: 500;
+    text-align: left;
   }
 
   &__choose {

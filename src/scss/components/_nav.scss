@@ -1,8 +1,16 @@
 .nav {
+  @include mobile {
+    display: none;
+  }
+
   &__list {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include small-tablet {
+      gap: 10px;
+    }
   }
 
   &__item {}
@@ -12,6 +20,10 @@
     position: relative;
     font-size: 16px;
     color: var(--white);
+
+    @include small-tablet {
+      font-size: 14px;
+    }
 
     &::before {
       content: "";

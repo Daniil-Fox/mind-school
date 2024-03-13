@@ -3,10 +3,18 @@
     padding: 60px 0;
     background-color: var(--cream);
     text-align: center;
+
+    @include tablet {
+      padding: 40px 0;
+    }
   }
 
   &__title {
     margin-bottom: 50px;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__desc {
@@ -15,10 +23,22 @@
   }
 
   &__content {
-    padding: 30px 0;
+    padding: 30px var(--container-offset);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+
+    @include tablet {
+      gap: 30px;
+    }
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 }
 

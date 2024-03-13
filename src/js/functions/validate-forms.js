@@ -1,7 +1,7 @@
 import JustValidate from 'just-validate';
 import Inputmask from "inputmask";
 
-export const validateForms = (selector, rules, afterSend) => {
+export const validateForms = (selector, rules, afterSend, inputRules = null) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
 
@@ -38,6 +38,11 @@ export const validateForms = (selector, rules, afterSend) => {
   for (let item of rules) {
     validation
       .addField(item.ruleSelector, item.rules);
+  }
+  if(inputRules){
+    for (let item of inputRules){
+      validation.addRequiredGroup(item)
+    }
   }
 
   validation.onSuccess((ev) => {

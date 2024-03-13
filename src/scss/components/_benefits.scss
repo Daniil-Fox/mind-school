@@ -2,6 +2,14 @@
   padding: 100px 0;
   background-color: var(--cream);
 
+  @include big-desktop {
+    padding: 60px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__container {
     max-width: 900px;
   }
@@ -12,6 +20,17 @@
     font-family: "Georgia";
     font-weight: 400;
 
+    @include big-desktop {
+      margin-bottom: 60px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
@@ -19,8 +38,20 @@
     align-items: flex-start;
     gap: 20px;
 
+    @include mobile {
+      gap: 10px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 55px;
+
+      @include tablet {
+        margin-bottom: 45px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -34,6 +65,16 @@
       height: 100%;
       object-fit: contain;
     }
+
+    @include small-tablet {
+      width: 45px;
+      height: 45px;
+    }
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__name {
@@ -41,6 +82,15 @@
     margin-bottom: 14px;
     font-size: 20px;
     letter-spacing: 1px;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
   }
 
   &__desc {
@@ -48,5 +98,14 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 110%;
+
+    @include small-tablet {
+      font-size: 15px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 127%;
+    }
   }
 }
