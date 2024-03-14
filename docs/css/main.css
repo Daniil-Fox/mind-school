@@ -82,6 +82,10 @@ body {
   scroll-behavior: smooth;
 }
 
+b {
+  font-weight: bold;
+}
+
 *,
 *::before,
 *::after {
@@ -272,7 +276,7 @@ a {
   top: 0;
   width: 100%;
   padding: 20px 0;
-  background-color: #259da8;
+  background-color: #9cac85;
 }
 .header__burger {
   width: 25px;
@@ -1326,7 +1330,7 @@ a {
 }
 
 .footer {
-  background-color: var(--accent);
+  background-color: #cdbea1;
   padding: 30px 0;
 }
 .footer__container {
@@ -1373,7 +1377,7 @@ a {
     border-color: #fff;
   }
   .footer__link:hover svg {
-    fill: var(--accent);
+    fill: transparent;
     stroke: #fff;
   }
 }

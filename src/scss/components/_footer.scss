@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--accent);
+  background-color: #cdbea1;
   padding: 30px 0;
 
   &__container {
@@ -32,7 +32,7 @@
       border-color: #fff;
 
       svg {
-        fill: var(--accent);
+        fill: transparent;
         stroke: #fff
       }
     }

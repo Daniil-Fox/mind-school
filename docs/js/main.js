@@ -371,11 +371,17 @@ const validateForms = function (selector, rules, afterSend) {
             afterSend();
           }
           console.log('Отправлено');
+        } else {
+          console.log('Не отправлено :(');
         }
       }
     };
-    xhr.open('POST', 'mail.php', true);
+    req.open('POST', 'http://localhost:8353/tg', false);
     xhr.send(formData);
+
+    // xhr.open('POST', 'mail.php', true);
+    // xhr.send(formData);
+
     ev.target.reset();
   });
 };
